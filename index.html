@@ -18,8 +18,8 @@
 
   <header>
     <nav class="navbar navbar-expand-xl d-flex justify-content-lg-between position-relative ms-2 me-2">
+      <div class="title text-center position-absolute top-50 start-50 translate-middle"><a href="/" style="text-decoration: none;">Garage Parrot</a></div>
       <a href="/" class="navbar-brand text-center">Logo</a>
-      <div class="title text-center position-absolute top-50 start-50 translate-middle" >Garage Parrot</div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
       aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -59,16 +59,16 @@
   <footer>
     <div class="container-fluid row">
         <div class="text-center col mt-3">
-          <h2>Horaires d'ouverture</h2>
-          <p>09:00 - 13:00</br>14:00 - 19:00</p>
+          <h2 class="mt-2">Horaires d'ouverture</h2>
+          <p class="mt-5">09:00 - 13:00</br>14:00 - 19:00</p>
         </div>
         <div class="text-center col mt-3">
-          <h2>Une question ?</h2>
-          <button type="button" class="btn" href="/contact">Contactez-nous !</button>
-          <p>06.06.06.06.06</p>
+          <h2 class="mt-2">Une question ?</h2>
+          <button type="button" class="btn mt-4" onclick="location.replace('/contact')">Contactez-nous !</button>
+          <p class="mt-4">06.06.06.06.06</p>
         </div>
     </div>
-    <div class="text-center"><i class="bi bi-arrow-bar-up fs-2"></i></div>
+    <div class="text-center"><a href="#"><i class="bi bi-arrow-bar-up fs-2"></i></a></div>
   </footer>
   <script type="module" src="Router/router.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

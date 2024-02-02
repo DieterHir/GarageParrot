@@ -12006,4 +12006,19 @@ header {
 
 i {
   color: #7B0F0F;
+}
+
+h2, .h2 {
+  color: #5A0000;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar-nav {
+  font-weight: 600;
 }/*# sourceMappingURL=main.css.map */
