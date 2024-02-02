@@ -46,3 +46,30 @@ footer{
 .navbar-nav{
     font-weight: 600;
 }
+
+h1{
+    color: $primary;
+    text-shadow: 3px 3px darkgrey;
+}
+
+.form-control{
+    &:hover{
+        border: 2px solid black;
+    }
+    border: 1px solid black;
+}
+
+.form-label{
+    color: $secondary;
+    font-size: 24px;
+}
+
+form{
+    width: 800px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
