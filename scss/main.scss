@@ -1,2 +1,33 @@
-@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 @import 'custom';
+
+.title{
+    color: $primary;
+    font-size: 50px;
+    text-shadow: 3px 3px darkgrey;
+}
+
+header, footer{
+    background-color: $dark-grey;
+}
+
+header{
+    height: 65px;
+}
+
+.btn{
+    &:hover{
+        border: 1px solid $tertiary;
+        background-color: white;
+        color: $tertiary;
+    }
+    background-color: $tertiary;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 4px;
+    font-weight: 400;
+}
+
+i{
+    color: $tertiary;
+}
