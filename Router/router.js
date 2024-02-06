@@ -32,6 +32,7 @@ const LoadContentPage = async () => {
         document.querySelector("body").appendChild(scriptTag);
     }
     document.title = actualRoute.title + " - " + websiteName;
+    console.log(actualRoute);
 };
 
 const routeEvent = (event) => {

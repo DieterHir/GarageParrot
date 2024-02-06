@@ -1,0 +1,19 @@
+{
+    "Users": [
+        { "Id": "1", "FirstName": "John", "LastName": "Doe", "Email": "john.doe@email.com", "Password": "JohnDoe33", "Role": "1"},
+        { "Id": "2", "FirstName": "Jeanne", "LastName": "D'arc", "Email": "jeanne.ausecours@email.com", "Password": "Jeanne33", "Role": "0"}
+    ],
+
+    "Vehicule": [
+        { "Id": "1", "Title": "RANGE ROVER", "Price": "15 000", "Year": "2020", "Mileage": "40 000", "Caracteristics": "VI TD4 150 BVA SE Dynamic", "Equipments": ""},
+        { "Id": "2", "Title": "RANGE ROVER 2", "Price": "12 000", "Year": "2021", "Mileage": "60 000", "Caracteristics": "VI TD4 100 BVA SE Dynamic", "Equipments": ""},
+        { "Id": "3", "Title": "RANGE ROVER 3", "Price": "10 000", "Year": "2022", "Mileage": "80 000", "Caracteristics": "VI TD4 250 BVA SE Dynamic", "Equipments": ""}
+    ],
+
+    "Services": [
+        { "Id": "1", "Title": "Vidange", "Price": "110 €", "Icon": "/images/icons/oil.svg"},
+        { "Id": "2", "Title": "Pneus", "Price": "En fonction du modèle", "Icon": "/images/icons/tire.svg"},
+        { "Id": "3", "Title": "Liquide frein", "Price": "70 €", "Icon": "/images/icons/water.svg"},
+        { "Id": "4", "Title": "Climatisation", "Price": "95 €", "Icon": "#"}
+    ]
+}

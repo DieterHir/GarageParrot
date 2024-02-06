@@ -11976,9 +11976,18 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  color: #5A0000;
+}
+
 .title {
   color: #680000;
-  font-size: 50px;
+  font-size: 42px;
   text-shadow: 3px 3px darkgrey;
 }
 
@@ -11994,7 +12003,7 @@ header {
   background-color: #7B0F0F;
   border-radius: 5px;
   color: white;
-  border: none;
+  border: 1px solid transparent;
   padding: 4px;
   font-weight: 400;
 }
@@ -12012,40 +12021,91 @@ h2, .h2 {
   color: #5A0000;
 }
 
-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
 .navbar-nav {
   font-weight: 600;
 }
 
 h1, .h1 {
   color: #680000;
-  text-shadow: 3px 3px darkgrey;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  text-shadow: 3px 3px 5px darkgrey;
 }
 
 .form-control {
-  border: 1px solid black;
+  box-shadow: 0 0 0 1px black;
+  background-color: #E0E0E0;
 }
 .form-control:hover {
-  border: 2px solid black;
+  box-shadow: 0 0 0 3px black;
 }
 
 .form-label {
   color: #5A0000;
   font-size: 24px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
 }
 
-form {
-  width: 800px;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
+#main-page {
+  flex-grow: 1;
+  margin-bottom: 30px;
+}
+
+textarea {
+  height: 200px;
+}
+
+.card {
+  background-color: #E0E0E0;
+  border-style: none;
+  font-size: 15px;
+}
+
+.card-title-home {
+  background-color: #E9E9E9;
+  border-radius: 5px;
+  border-style: none;
+  font-size: 20px;
+  font-family: "Rajdhani", sans-serif;
+  color: #680000;
+  display: inline-block;
+  padding: 5px;
+}
+
+.card-title-occas {
+  color: #5A0000;
+  font-family: "Rajdhani", sans-serif;
+}
+
+p {
+  color: #5A0000;
+}
+
+.card-text {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  color: black;
+}
+
+.price-text {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  color: #7B0F0F;
+  font-weight: 700;
+  text-shadow: 3px 3px 5px darkgrey;
+}
+
+#search-option {
+  color: #7B0F0F;
+  border-style: none;
+  background-color: #E0E0E0;
+}
+
+.input-group-text {
+  background-color: #E0E0E0;
+}
+
+ul {
+  background-color: #E0E0E0;
 }/*# sourceMappingURL=main.css.map */
