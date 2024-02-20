@@ -1,0 +1,85 @@
+<div>
+  <div>
+    <h1 class="text-center mt-5">Gestion des employés</h1>
+    <div id="users"></div>
+  </div>
+
+  <div>
+    <h1 class="text-center mt-5">Création d'un nouveau compte employé</h1>
+    <div class="d-flex justify-content-center">
+      <form class="row con-form" id="newUser">
+        <div class="mb-3">
+          <label for="inputFirstName" class="form-label">Prénom</label>
+          <input type="" class="form-control" id="inputFirstName" name="firstName">
+        </div>
+        <div class="mb-3">
+          <label for="inputLastName" class="form-label">Nom</label>
+          <input type="" class="form-control" id="inputLastName" name="lastName">
+        </div>
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label">Adresse mail de l'employé</label>
+          <input type="email" class="form-control" id="inputEmail" name="mail">
+        </div>
+        <div class="mb-3">
+          <label for="inputPassword" class="form-label">Mot de passe</label>
+          <input type="password" class="form-control" id="inputPassword" name="password">
+        </div>
+        <button type="button" class="btn ps-3 pe-3 col-md-4 offset-md-4" id="add-button">Créer</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--Modale de modification d'User -->
+<div class="modal fade" tabindex="-1" id="updateUserModal" aria-hidden="true" aria-labelledby="updateVehiculeModal">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Modifier un compte employé</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <form class="d-flex flex-column justify-content-center" id="formUpdateUser" action="../js/occasions.js" method="POST">
+                      <div class="mb-3 col-8">
+                          <label for="firstNameInput" class="form-label">Prénom</label>
+                          <input type="text" class="form-control" id="firstNameInput" name="firstName">
+                      </div>
+                      <div class="mb-3 col-8">
+                          <label for="lastNameInput" class="form-label">Nom</label>
+                          <input type="text" class="form-control" id="lastNameInput" name="lastName">
+                      </div>
+                      <div class="mb-3 col-8">
+                          <label for="mailInput" class="form-label">Adresse mail</label>
+                          <input type="email" class="form-control" id="mailInput" name="mail">
+                      </div>
+                      <div class="mb-3 col-8">
+                          <label for="passwordInput" class="form-label">Mot de passe</label>
+                          <input type="password" class="form-control" id="passwordInput" name="password">
+                      </div>
+                  </form>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Annuler</button>
+              <button type="submit" class="btn" id="btn-update">Modifier les informations du compte</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--Modale de suppression d'User-->
+<div class="modal fade" tabindex="-1" id="deleteUserModal" aria-hidden="true" aria-labelledby="deleteUserModal">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Êtes-vous sûr de vouloir supprimer le compte employé ?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Annuler</button>
+              <button type="button" class="btn" id="btn-delete" data-bs-dismiss="modal">Supprimer</button>
+          </div>
+      </div>
+  </div>
+</div>

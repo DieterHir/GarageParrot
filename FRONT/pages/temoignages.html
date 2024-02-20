@@ -1,0 +1,31 @@
+<div>
+  <h1 class="text-center mt-5">Aidez-nous à améliorer nos services </br> en laissant un avis via ce formulaire :</h1>
+
+  <div class="d-flex justify-content-center">
+    <form id="temoignagesForm" class="row col-6">
+      <div class="mb-3 col-md-6">
+        <label for="nameInput" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="nameInput" name="lastName" required>
+        <div class="invalid-feedback">Veuillez entrer un nom</div>
+      </div>
+      <div class="mb-3 col-md-6">
+        <label for="firstNameInput" class="form-label">Prénom</label>
+        <input type="text" class="form-control" id="firstNameInput" name="firstName" required>
+        <div class="invalid-feedback">Veuillez entrer un prénom</div>
+      </div>
+      <div class="mb-3">
+        <label for="messageInput" class="form-label">Message</label>
+        <textarea class="form-control" id="messageInput" name="message" required></textarea>
+        <div class="invalid-feedback">Veuillez entrer un message</div>
+      </div>
+      <div class="mb-3 d-flex justify-content-around">
+        <label for="note" class="form-check-label">
+          <h3>Laissez une note de 1 à 5</h3>
+        </label>
+        <input id="noteInput" type="number" class="form-check-input" min="1" max="5" name="note" style="width: 40px;" required>
+        <div class="invalid-feedback">Veuillez laisser une note</div>
+      </div>
+      <button id="add-button" type="button" class="disabled btn ps-3 pe-3 col-md-4 offset-md-4">Envoyer</button>
+    </form>
+  </div>
+</div>

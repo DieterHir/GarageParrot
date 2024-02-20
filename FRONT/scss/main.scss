@@ -1,0 +1,237 @@
+@import 'custom';
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family-body;
+    font-weight: 500;
+    color: $secondary;
+}
+
+.title{
+    color: $primary;
+    font-size: 42px;
+    text-shadow: 3px 3px darkgrey;
+}
+
+header, footer{
+    background-color: $dark-grey;
+}
+
+header{
+    height: 65px;
+}
+
+.btn{
+    &:hover{
+        border: 1px solid $tertiary;
+        background-color: white;
+        color: $tertiary;
+    }
+    background-color: $tertiary;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid transparent;
+    padding: 4px;
+    font-weight: 400;
+}
+
+i{
+    color: $tertiary;
+}
+
+h2{
+    color: $secondary;
+}
+
+.navbar-nav{
+    font-weight: 600;
+}
+
+h1{
+    color: $primary;
+    font-family: $font-family-headline;
+    font-weight: 600;
+    text-shadow: 3px 3px 5px darkgrey;
+}
+
+.form-control{
+    &:hover{
+        box-shadow: 0 0 0 3px black;
+    }
+    box-shadow: 0 0 0 1px black;
+    background-color: $dark-grey;
+}
+
+.form-label{
+    color: $secondary;
+    font-size: 24px;
+    font-family: $font-family-body;
+    font-weight: 500;
+}
+
+#main-page{
+    flex-grow: 1;
+    margin-bottom: 30px;
+}
+
+textarea{
+    height: 200px;
+}
+
+.card{
+    background-color: $dark-grey;
+    border-style: none;
+    font-size: 15px;
+}
+
+.card-title-home{
+    background-color: $light-grey;
+    border-radius: 5px;
+    border-style: none;
+    font-size: 20px;
+    font-family: $font-family-headline;
+    color: $primary;
+    display: inline-block;
+    padding: 5px;
+}
+
+.card-title-occas{
+    color: $secondary;
+    font-family: $font-family-headline;
+}
+p{
+    color: $secondary;
+}
+
+.card-text{
+    font-family: $font-family-headline;
+    font-size: 14px;
+    color: black;
+}
+
+.price-text{
+    font-family: $font-family-body;
+    font-size: 18px;
+    color: $tertiary;
+    font-weight: 700;
+    text-shadow: 3px 3px 5px darkgrey;
+}
+
+#search-option{
+    color: $tertiary;
+    border-style: none;
+    background-color: $dark-grey;
+}
+
+.input-group-text{
+    background-color: $dark-grey;
+}
+
+ul{
+    background-color: $dark-grey;
+}
+
+#bouton{
+    border: none;
+    color: green;
+}
+
+.btn-cancel{
+    background-color: $dark-grey;
+    color: black;
+}
+
+#bouton-delete{
+    border: none;
+    color: red;
+}
+
+.userDisplay{
+    border: 1px solid black;
+}
+
+.img-card{
+    position: relative;
+    &:hover{
+        .img-card-buttons{
+            opacity: 1;
+        }
+    }
+}
+
+.img-card-buttons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+
+    margin-right: 5px;
+
+    opacity: 0;
+    transition: all 0,3s;
+}
+
+.img-card-button{
+    background-color: transparent;
+    border: none;
+}
+
+.icon-white{
+    color: white;
+}
+
+.bi-pencil-fill{
+    &:hover{
+        color: orange;
+    }
+}
+
+.bi-x-circle{
+    &:hover{
+        color: red;
+    }
+}
+
+h3{
+    font-size: 20px;
+    color: $secondary;
+}
+
+.div-temoignage{
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.border-div{
+    border: 1px solid $secondary;
+}
+
+.button-approve{
+    border: none;
+    background-color: transparent;
+    color: $tertiary;
+    &:hover{
+        color: green;
+    }
+}
+
+.button-disapprove{
+    border: none;
+    background-color: transparent;
+    color: $tertiary;
+    &:hover{
+        color: red;
+    }
+}
+
+.card-title{
+    font-size: 20px;
+    color: $primary;
+}
+.card-text{
+    font-size: 16px;
+    color: $secondary;
+}

@@ -1,0 +1,144 @@
+<!--<form class="d-flex flex-column justify-center" method="POST" id="newVehicule" action="../test.php">
+    <label for="VehiculeTitle">Nom du véhicule</label>
+    <input type="text" id="VehiculeTitle" name="VehiculeTitle">
+    <label for="VehiculePrice">Prix</label>
+    <input type="text" id="VehiculePrice" name="VehiculePrice">
+    <label for="VehiculeYear">Année</label>
+    <input type="text" id="VehiculeYear" name="VehiculeYear">
+    <label for="VehiculeMileage">Kilométrage</label>
+    <input type="text" id="VehiculeMileage" name="VehiculeMileage">
+    <label for="VehiculeCaracs">Caractéristiques</label>
+    <input type="text" id="VehiculeCaracs" name="VehiculeCaracs">
+    <label for="VehiculeEquipments">Equipements</label>
+    <input type="text" id="VehiculeEquipments" name="VehiculeEquipments">
+    <button type="submit" class="text-center" name="submit">Ajouter un véhicule</button>
+</form>
+-->
+
+<div class="row justify-content-center mt-4">
+    <h1 class="ms-5 row">Nos occasions</h1>
+    <div class="searchbar col-6">
+        <div class="input-group rounded">
+            <span class="input-group-text border-0" id="search-addon">
+                <i class="bi bi-search"></i>
+            </span>
+            <input type="search" class="form-control rounded border-0" placeholder="Rechercher.." aria-label="Recherche"
+                aria-describedby="search-addon" />
+            <span class="input-group-text border-0" id="search-addon">
+                <button class="bi bi-bar-chart-steps" id="search-option"></button>
+            </span>
+        </div>
+    </div>
+    <div class="col-6 offset-4 row mt-3" data-show="ROLE_USER">
+        <button type="button" id="bouton" data-bs-toggle="modal" data-bs-target="#addVehiculeModal" class="col-4"><i class="bi bi-plus-circle"> Nouvelle offre</i></button>
+    </div>
+    <div id="cars"></div>
+</div>
+
+<!--Modale d'ajout d'offre-->
+<div class="modal fade" tabindex="-1" id="addVehiculeModal" aria-hidden="true" aria-labelledby="addVehiculeModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Ajouter une offre</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form class="d-flex flex-column justify-content-center" id="formAddVehicule" action="../js/occasions.js" method="POST">
+                        <div class="mb-3 col-8">
+                            <label for="titleInput" class="form-label">Titre</label>
+                            <input type="text" class="form-control" id="titleInput" name="title">
+                        </div>
+                        <div class="mb-3 col-8">
+                            <label for="priceInput" class="form-label">Prix</label>
+                            <input type="number" class="form-control" id="priceInput" name="price">
+                        </div>
+                        <div class="mb-3 col-8">
+                            <label for="yearInput" class="form-label">Année de fabrication</label>
+                            <input type="number" class="form-control" id="yearInput" name="year">
+                        </div>
+                        <div class="mb-3 col-8">
+                            <label for="mileageInput" class="form-label">Kilométrage</label>
+                            <input type="number" class="form-control" id="mileageInput" name="mileage">
+                        </div>
+                        <div class="mb-3 col-8">
+                            <label for="caracsInput" class="form-label">Caractéristiques</label>
+                            <input type="textarea" class="form-control" id="caracsInput" name="caracs">
+                        </div>
+                        <div class="mb-3 col-8">
+                            <label for="equipmentsInput" class="form-label">Equipements</label>
+                            <input type="textarea" class="form-control" id="equipmentsInput" name="equipments">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Annuler</button>
+                <button type="submit" class="btn" id="addButton">Ajouter l'offre</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal de suppression d'une offre-->
+<div class="modal fade" tabindex="-1" id="deleteVehiculeModal" aria-hidden="true" aria-labelledby="addVehiculeModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Êtes-vous sûr de vouloir supprimer l'offre ?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Annuler</button>
+                <button type="button" class="btn" id="btn-delete" data-bs-dismiss="modal">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modale de modification d'une offre-->
+<div class="modal fade" tabindex="-1" id="updateVehiculeModal" aria-hidden="true" aria-labelledby="updateVehiculeModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modifier une offre</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form class="d-flex flex-column justify-content-center" id="formUpdateVehicule" action="../js/occasions.js" method="POST">
+                        <div class="mb-3 col-8">
+                            <label for="titleInput" class="form-label">Titre</label>
+                            <input type="text" class="form-control" id="titleInput" name="title">
+                        </div>
+                        <div class="mb-3 col-8">
+                            <label for="priceInput" class="form-label">Prix</label>
+                            <input type="number" class="form-control" id="priceInput" name="price">
+                        </div>
+                        <div class="mb-3 col-8">
+                            <label for="yearInput" class="form-label">Année de fabrication</label>
+                            <input type="number" class="form-control" id="yearInput" name="year">
+                        </div>
+                        <div class="mb-3 col-8">
+                            <label for="mileageInput" class="form-label">Kilométrage</label>
+                            <input type="number" class="form-control" id="mileageInput" name="mileage">
+                        </div>
+                        <div class="mb-3 col-8">
+                            <label for="caracsInput" class="form-label">Caractéristiques</label>
+                            <input type="textarea" class="form-control" id="caracsInput" name="caracs">
+                        </div>
+                        <div class="mb-3 col-8">
+                            <label for="equipmentsInput" class="form-label">Equipements</label>
+                            <input type="textarea" class="form-control" id="equipmentsInput" name="equipments">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Annuler</button>
+                <button type="submit" class="btn" id="btn-update">Modifier l'offre</button>
+            </div>
+        </div>
+    </div>
+</div>
